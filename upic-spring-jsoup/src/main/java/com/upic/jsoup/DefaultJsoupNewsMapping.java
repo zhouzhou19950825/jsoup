@@ -33,7 +33,9 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 	public static DefaultJsoupNewsMapping getSearch(Search search) {
 		return new DefaultJsoupNewsMapping(search);
 	} 
-	
+	public static DefaultJsoupNewsMapping getSearch() {
+		return new DefaultJsoupNewsMapping(null);
+	} 
 	@Override
 	protected Element getNewtext(Document doc) {
 		Element elementById =null;
