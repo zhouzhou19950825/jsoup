@@ -3,6 +3,10 @@ var groups = "";
 var content = "";
 $(function () {
     getAllSearch();
+
+    $("#searchOption").onChange(function () {
+        $("#searchOption option:selected").attr("webName")
+    })
 })
 
 function getAllSearch() {
@@ -57,7 +61,7 @@ function group(search) {
 }
 
 // 根据组名获取类型
-function getByGroupName() {
+function getByGroupName(search) {
     content = new Array();
     for (i in groups) {
         for (var i = 0; i < search.length; i++) {
@@ -66,4 +70,14 @@ function getByGroupName() {
             }
         }
     }
+}
+
+function addSearchOption(result) {
+    var searchOptionHtml = '';
+
+    for (var i = 0; i < result.length; i++) {
+        searchOptionHtml += '<option webName="' + result[i].webName + '" value="">' + result[i].webName + '</option>'; // What's webName?这个不懂webName到底是什么？
+    }
+
+    $("#searchOption").html(searchOptionHtml);
 }
