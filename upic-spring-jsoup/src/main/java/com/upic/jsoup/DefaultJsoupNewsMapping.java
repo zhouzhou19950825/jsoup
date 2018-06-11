@@ -18,7 +18,7 @@ import com.upic.jsoup.po.Search;
  * 教育：http://edu.gmw.cn/node_10810.htm
  * 搜索：http://search.gmw.cn/search.do?c=n&cp=1&q=[content]&tt=false&to=true&adv=false
  * adv false新闻全文 true新闻标题
- * 
+ *
  * @author dtz
  *
  */
@@ -31,11 +31,11 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 	}
 	public static DefaultJsoupNewsMapping getSearch(Search search) {
 		return new DefaultJsoupNewsMapping(search);
-	} 
+	}
 	public static DefaultJsoupNewsMapping getSearch() {
 		return new DefaultJsoupNewsMapping(null);
-	} 
-	
+	}
+
 	@Override
 	protected Element getNewtext(Document doc) {
 		Element elementById =null;
@@ -113,7 +113,7 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 	}
 	/**
 	 * 搜索新闻
-	 * 
+	 *
 	 * @param url
 	 * @return
 	 * @throws IOException
@@ -149,7 +149,7 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 	private String splicingUrl(String baseUrl,Map<String,String> values) {
 		StringBuffer sb=new StringBuffer();
 		if(values==null) {
-			return baseUrl; 
+			return baseUrl;
 		}
 		sb.append(baseUrl).append("?");
 		values.forEach((key,value)->{
@@ -174,9 +174,9 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 //		search3.forEach(System.out::println);
 		find();
 	}
-	
+
 	public static void find() {
-		
+
 		Search s=new Search();
 		s.setClassNameSearchList("texie");
 		s.setContentListClassName(Arrays.asList("articlemain"));
@@ -188,6 +188,6 @@ public class DefaultJsoupNewsMapping extends AbstractJsoupNewsMapping {
 		List<News> search3 = search2.search();
 //		List<News> search = g.search(s);
 		search3.forEach(System.out::println);
-		
+
 	}
 }
