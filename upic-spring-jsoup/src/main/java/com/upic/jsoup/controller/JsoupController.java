@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,7 +39,7 @@ public class JsoupController {
 		return null;
 	}
 	
-	@RequestMapping("/getNews")
+	@PostMapping("/getNews")
 	public News getNews(String url) {
 		try {
 			DefaultJsoupNewsMapping search = DefaultJsoupNewsMapping.getSearch();
@@ -48,4 +49,9 @@ public class JsoupController {
 		}
 		return null;
 	}
+	
+	@RequestMapping("/getAllSearch")
+	public List<Search> getAllSearch(){
+		return searchR.findAll();
+	} 
 }

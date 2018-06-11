@@ -9,7 +9,6 @@ import java.util.Map;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.stereotype.Component;
 
 import com.upic.jsoup.po.News;
 import com.upic.jsoup.po.Search;

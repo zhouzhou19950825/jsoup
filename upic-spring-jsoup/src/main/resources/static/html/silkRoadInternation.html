@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<link rel = "stylesheet" href = "../css/YDYL.css">
+ 	<script type="text/javascript"  src = "../js/vue.js"></script> 
+ 	<title>丝路国际</title>
+ </head>
+ <body id = "size">
+      <div class = "mainPage">
+      	<div class = "table3">
+      		<span>
+      			<p class = "internationTableTitle">丝路国际</p>
+      		</span>
+      		<table id = "silkInternation">
+      			<tr>
+      				<td style = "width:10%;">地区</td>
+      				<td style = "width:10%;">类型</td>
+      				<td style = "width:25%;">项目名称</td>
+      				<td style = "width:35%">项目概况</td>
+      				<td style = "width:10%;">投资额</td>
+      				<td style = "width:10%;">发布时间</td>
+      			</tr>
+      			<tr v-for = "item of list" v-cloak>
+      				<td>{{item.area}}</td>
+      				<td>{{item.type}}</td>
+      				<td><p class = "nameCol">{{item.name}}</p></td>
+      				<td><p class = "situationCol">{{item.situation}}</p></td>
+      				<td>{{item.investment}}</td>
+      				<td>{{item.date}}</td>
+      			</tr>
+      		</table>
+
+      </div>
+ 	 
+
+ 	  <script type="text/javascript">
+ 	  	var silkTable = new Vue({
+ 	  		el:'#silkInternation',
+ 	  		data:{
+ 	  			list:[{
+ 	  				area:'柬埔寨',
+ 	  				type:'电力',
+ 	  				name:'柬埔寨南方水泥2500吨/天 熟料生产线和2x12MW燃煤发电项目',
+ 	  				situation:'每天生产天然熟料，燃煤装机容量为2x12MW,上海中......',
+ 	  				investment:'————',
+ 	  				date:'2018-03-18'
+ 	  			},
+ 	  			{
+                    area:'越南',
+ 	  				type:'电力',
+ 	  				name:'越南36MW地面光伏电站项目',
+ 	  				situation:'装机容量为36MW。中国电建集团贵州公司有限公司以EPC总承包方式....',
+ 	  				investment:'————',
+ 	  				date:'2018-04-17'
+
+ 	  			}]
+ 	  		}
+ 	  	})
+ 	  </script>
+ </body>
+ </html>
