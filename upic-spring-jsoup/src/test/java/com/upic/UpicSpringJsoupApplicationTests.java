@@ -28,6 +28,7 @@ public class UpicSpringJsoupApplicationTests {
         search.setPubTime("timespan");
         search.setSource("source");
         search.setUrl("http://www.fortunechina.com/business/");
+        search.setWebName("财富中文网");
 
         searchRepository.saveAndFlush(search);
     }
