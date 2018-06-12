@@ -40,9 +40,14 @@ public class JsoupController {
 	}
 	
 	@PostMapping("/getNews")
-	public News getNews(String url) {
+	public News getNews(String url,long id) {
 		try {
-			DefaultJsoupNewsMapping search = DefaultJsoupNewsMapping.getSearch();
+			Optional<Search> findById = searchR.findById(id);
+			if (!findById.isPresent()) {
+				return null;
+			}
+			Search search2 = findById.get();
+			DefaultJsoupNewsMapping search = DefaultJsoupNewsMapping.getSearch(search2);
 			return search.getNewByurl(url);
 		} catch (Exception e) {
 			LOGGER.error("getNews:"+e.getMessage());

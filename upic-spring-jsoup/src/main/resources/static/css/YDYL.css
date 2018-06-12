@@ -1,0 +1,793 @@
+@font-face{
+	font-family: "PingFang-SC-Bold";
+	src: url(../fonts/PingFang-SC-Bold.ttf);
+}
+
+
+@font-face{
+	font-family: "PingFang-SC-Regular";
+	src: url(../fonts/PingFang-SC-Regular.otf);
+}
+
+@font-face{
+	font-family: "SF-UI";
+	src: url(../fonts/SF-UI-Text-Regular.otf);
+}
+
+
+li{
+	list-style: none;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,hr,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,canvas{padding:0; margin:0;}
+
+.mainPage{
+	font-family: "PingFang-SC-Regular";
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+a{
+	text-decoration:none;
+	color:#000;
+}
+
+
+button{
+	outline: none;
+	cursor:pointer;
+}
+
+
+
+#size{
+	width:1200px;
+	padding-bottom: 50px;
+}
+
+.YDYL{
+	margin:auto;
+	width:1200px;
+}
+
+
+.topMessage{
+	margin:auto;
+	height:240px;
+	width:1200px;
+	background-color: #ccc;
+	margin-top:15px;
+}
+
+.titleBar{
+	height:128px;
+}
+
+
+.titleFont{
+	font-family: "PingFang-SC-Bold";
+}
+
+
+.logo{
+	position:relative;
+	font-size: 74px;
+	height:100px;
+	display:inline-block;
+	margin-left:50px;
+	vertical-align:bottom;
+}
+
+.mainTitle{
+	position:relative;
+	display:inline-block;
+	margin-left:27px;
+	margin-top:20px;
+}
+
+.navToolbar{
+	width:1200px;
+	height:107px;
+}
+
+
+.navBar{
+	width:1200px;
+	height:45px;
+	text-align: center;
+	background-color: #57453F;
+	
+}
+
+.cnTitle{
+	font-size:48px;
+}
+
+
+.enTitle{
+	font-size: 20px;
+}
+
+
+.nav{
+	list-style: none;
+	height: 40px;
+}
+
+.nav>li{
+	position:relative;
+	display: inline-block;
+	width:125px;
+	height:50px;
+	cursor: pointer;
+	font-family: "PingFang-SC-Regular";
+	font-size:18px;
+	color:#FFF;
+}
+
+.nav>li>a{
+	position: relative;
+	display: inline-block;
+	width:125px;
+	font-family: "PingFang-SC-Regular";
+	font-size:18px;
+	color:#FFF;
+	margin-top: 9px;
+}
+.nav>li>p{
+	height: 20px;
+}
+
+
+#subNavBar{
+	height:67px;
+	background:#fff;
+	border-bottom:solid 4px #000;
+}
+
+
+.subNavBar>p{
+    display: inline-block;
+    font-family: "PingFang-SC-Regular";
+    font-size: 18px;
+    margin-left:9px;
+    margin-top:20px;
+    height:20px;
+	width:90px;
+}
+
+.nav>li>a>canvas{
+	position:relative;
+	height:20px;
+	opacity:0;
+	padding-top: -5px;
+}
+
+
+
+
+
+.mainShowArea{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+
+.table2>span,.table1>span{
+	margin-left:50px;
+	padding-top: -5px;
+}
+
+
+.tableTitle{
+	font-size: 20px;
+	margin-top: 47px;
+	margin-left:40px;
+}
+
+
+#asia,#africa{
+	text-align: left;
+	width:1120px;
+	margin-top:25px;
+	font-size: 13px;
+	font-family:"PingFang-SC-Regular"; 
+}
+
+table{ 
+	border-collapse:collapse;
+	margin-left:40px;
+	font-family:  "PingFang-SC-Regular";
+}
+table tr td{ 
+	border-bottom:1px solid #dedede;
+}
+
+
+td{
+	height:50px;
+	width:237px;
+}
+
+
+.nameCol{
+	width:210px;
+}
+
+
+.situationCol{
+	width:340px;
+}
+
+
+.internationTableTitle{
+	font-family: "PingFang-SC-Regular";
+	margin-top: 30px;
+	font-size: 20px;
+
+}
+
+
+#silkInternation{
+	margin-top: 25px;
+	margin-left: 0px;
+}
+
+
+.leftArticle{
+	position: relative;
+	width:710px;
+	display: inline-block;
+	vertical-align:top;
+}
+
+
+.investmentSituation>table{
+	width:100%;
+	margin-left: 0;
+}
+
+.articleTitle>h1{
+	font-family: "PingFang-SC-Bold";
+	font-size:24px;
+	margin-top:30px;
+	margin-left:15px;
+}
+
+.investmentSituation{
+	margin-left:10px;
+}
+
+#detailStuation tr td{
+	border-bottom:1px dashed #dedede;
+}
+
+.rightArticle{
+	position: relative;
+	width:430px;
+	display:inline-block;
+	margin-top:20px;
+	border: 1px solid #000;
+	border-right:none;
+	vertical-align:top;
+	margin-left:45px;
+	padding-bottom: 30px;
+}
+
+.hr1{
+	position: relative;
+	margin-top:30px;
+	height:3px;
+	border:none;
+	border-top: 3px solid #57453f;
+	width:25%;
+	display: inline-block;
+}
+
+.hr2{
+	position: relative;
+	margin-top:30px;
+	height:3px;
+	border:none;
+	border-top: 3px solid #aba29f;
+	width:75%;
+	display:inline-block; 
+	margin-left: -10px;
+}
+
+.rightArticle>.articleTitle>h1{
+      margin-top:20px;
+}
+
+#middleShow>span,#bottomShow>span,#topShow>span{
+	margin-top: 3px;
+	}
+
+
+#middleShow>span>p,#bottomShow>span>p,#topShow>span>p{
+	display: inline-block;
+}
+
+
+#middleShow,#topShow,#bottomShow{
+	margin-top:35px;
+	font-family: "PingFang-SC-Regular";
+	margin-left:25px;
+}
+
+.hr3{
+	height:3px;
+	border:none;
+	border-top: 2px dashed #aba29f;
+	width:90%;
+	margin-top:30px;
+}
+
+.articleBox{
+	position: relatvie;
+}
+
+
+
+.newsShow,.mediaNewsShow{
+	margin-top: 18px;
+	border-top:3px solid #57453F;
+}
+
+
+#middleShow>p,#bottomShow>p,#topShow>p{
+	color:#aba29f;
+}
+
+.tableBox{
+	margin-top:30px;
+}
+
+
+
+.articleTitle>h1{
+	display: inline-block;
+}
+
+.articleTitle>p{
+	font-family: "SF-UI";
+	display: inline-block;
+	font-size: 20px;
+	color:#999999;
+}
+
+
+.mediaNewsShow>#topShow>div>h3,.mediaNewsShow>#middleShow>div>h3,.mediaNewsShow>#bottomShow>div>h3{
+	display: inline;
+	font-size:24px;
+}
+
+.mediaNewsShow>#topShow>div>img,.mediaNewsShow>#middleShow>div>img,.mediaNewsShow>#bottomShow>div>img{
+	display: inline;
+	width:77px;
+	height:65px;
+	float:left;
+}
+
+.mediaNewsShow>#topShow>div,.mediaNewsShow>#middleShow>div,.mediaNewsShow>#bottomShow>div{
+	height: 66px;
+}
+
+#hotView>li{
+    height: 80px;
+    border-bottom:2px dashed #999;
+}
+
+.strategyResearch{
+	margin-top:30px;
+}
+
+#expertSelect{
+	outline:none;
+	width:160px;
+	height:28px;
+	border-radius: 4px;
+	margin-left: 80px;
+}
+
+
+#searchInput{
+	margin-left: 12px;
+    outline:none;
+	width:214px;
+	height: 28px;
+	border-radius: 4px;
+	border:1px solid #999;
+	padding-left:10px;
+}
+
+
+#searchButton{
+	margin-left: 12px;
+	outline:none;
+	border: none;
+	height: 28px;
+	width:64px;
+	border-radius: 4px;
+	background-color: rgb(87,69,63);
+	color: #fff;
+	cursor: pointer;
+}
+
+.topSearch{
+	position:relative;
+	margin-left: 12px;
+	margin-top:30px;
+}
+
+
+.zt_list{
+	font-family: "PingFang-SC-Regular";
+	width:40%;
+	height:130px;
+	display:inline-block;	
+	margin-left:80px;
+}
+
+.zt_list>div{
+	display: inline-block;
+	vertical-align:middle;
+	margin-top: 30px;
+}
+
+.zt_img{
+	width:100px;
+	height:100px;
+	margin-left: 15px;
+}
+
+.zt_info{
+	margin-left: 30px;
+}
+
+
+.zt_info>a>h3{
+	font-color:#57453F;
+    font-size: 18px;
+}
+
+
+.zt_info>p{
+	font-size: 14px;
+	font-color:#57453F;
+	width:280px;
+}
+
+.literatureInfo{
+	width:70%;
+}
+
+.literatureInfo>p{
+	width:45%;
+	display: inline-block;
+	font-size: 14px;
+	font-color:#57453F;
+}
+
+.literatureInfo>div{
+	width:45%;
+	display: inline-block;
+}
+
+
+.literatureBtn{
+	height:16px;
+	width:64px;
+	font-size: 10px;
+	color:#FFF;
+	background-color: #E0C681;
+	border:none;
+	outline: none;
+	border-radius:4px;
+	cursor:pointer;
+}
+
+
+.academicTitle{
+	font-family: "PingFang-SC-Bold";
+	font-size:24px;
+	margin-top:31px;
+}
+
+
+.literatureInfo{
+	margin-top: 11px;
+}
+
+.summary{
+	margin-top: 65px;
+}
+
+.authorInfo{
+	margin-top: 52px;
+}
+
+
+
+.summary>div>p{
+	color:#E0C681;
+}
+
+.news_list{
+	display: inline-block;
+	text-align: center;
+	width:24%;
+	margin-top: 20px;
+}
+
+.left_img{
+	display:inline-block;
+	width:25%;
+	text-align: center;
+}
+
+
+.right_article{
+	display:inline-block;
+	vertical-align:top;
+	width:70%;
+}
+
+
+.left_img>img{
+	margin-top: 35px;
+	width:200px;
+	height: 200px;
+}
+
+.left_img>p{
+	margin-top: 20px;
+}
+
+.introduction>article{
+	margin-top: 15px;
+}
+
+
+
+.mainWork>article{
+	margin-top: 15px;
+}
+
+.researchDirection>article{
+	margin-top: 15px;
+}
+
+
+
+.right_article>*>h2{
+	margin-top: 40px;
+}
+
+
+.newsLogo{
+	text-align: center;
+}
+
+
+.newsLogo>img{
+    margin-top: 25px;
+}
+
+
+
+#newsDiv{
+	text-align: center;
+}
+
+
+#newsDiv>h1{
+	margin-top: 14px;
+	font-weight: normal;
+}
+
+#newsDiv>p{
+	margin-top: 11px;
+	color: #B3B3B3;
+}
+
+#newsDiv>img{
+	margin-top: 35px;
+}
+
+
+#newsDiv>article{
+	margin-top: 31px;
+	width:808px;
+	margin-left: 197px;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+
+
+.timeRange{
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 35px;
+}
+
+
+#filterBtn{
+	display: inline-block;
+	width:100px;
+	height:28px;
+	margin-left: 205px;
+	background-color: #57453F;
+	border-radius: 4px;
+	border: none;
+	color:#fff;
+}
+
+.topID,.middle1ID,.middle2ID{
+	position: relative;
+	padding-bottom: 40px;
+	border-bottom: 2px solid #eee;
+}
+
+
+
+.topID>p{
+    font-size: 12px;
+    color:#57453F;
+    margin-left: 28px;
+    margin-top:16px;
+}
+
+
+#compareBtn{
+	margin-left: 1045px;
+	width:100px;
+	height:28px;
+	background-color: #57453F;
+	border-radius: 4px;
+	border: none;
+	color:#fff;
+	margin-top: 29px;
+}
+
+
+.group,.field,.country,.index,.project{
+	width:15%;
+    margin-left: 32px;
+    margin-top: 25px;
+}
+.group>select{
+	width:160px;
+	height:28px;
+	border-radius:4px;
+	margin-top: 8px;
+}
+
+.group>p{
+	font-size: 12px;
+}
+
+.field>select{
+	width:160px;
+	height:28px;
+	border-radius:4px;
+	margin-top: 8px;
+}
+
+.field>p{
+	font-size: 12px;
+}
+
+
+.country>input{
+	width:160px;
+	height: 28px;
+	border:1px solid #999;
+	border-radius:4px;
+	margin-top: 8px;
+	outline:none;
+}
+
+.country>p{
+	font-size: 12px;
+}
+
+.middle2ID>div,.middle1ID>div{
+	display: inline-block;
+}
+
+
+.index>input{
+	width:160px;
+	height: 28px;
+	border:1px solid #999;
+	border-radius:4px;
+	margin-top: 8px;
+	outline:none;
+}
+
+.index>p{
+	font-size: 12px;
+}
+
+.project>input{
+	width:160px;
+	height: 28px;
+	border:1px solid #999;
+	border-radius:4px;
+	margin-top: 8px;
+	outline:none;
+}
+
+.project>p{
+	font-size: 12px;
+}
+
+#container{
+	margin-left: 50px;
+}
+
+
+#chartSwitching{
+	margin-left: 1045px;
+	width:100px;
+	height:28px;
+	background-color: #57453F;
+	border-radius: 4px;
+	border: none;
+	color:#fff;
+	margin-top: 29px;
+}
+
+
+.buttonField{
+	margin-top: 30px;
+	margin-left: 100px;
+}
+
+.buttonField>button{
+	display: inline-block;
+	width:68px;
+	height: 28px;
+	border-radius: 4px;
+	background-color: #FFF;
+	border: 1px solid #000;
+	margin-left:15px;
+}
+
+
+.silkRoadinfo>h1{
+	text-align: center;
+	margin-top: 66px;
+}
+
+
+.silkRoadinfo>p{
+	width: 1000px;
+	margin-left: 100px;
+	margin-top:51px;
+	font-size: 16px;
+}
+
+
+#silkRoadTable{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#countryNavTable{
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+
+.country_nav{
+	border-bottom:solid 4px #000;
+
+}

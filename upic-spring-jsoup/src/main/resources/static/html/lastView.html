@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" href = "../css/YDYL.css">
+	<script type="text/javascript" src = "../js/vue.js"></script>
+	<title>最新观点</title>
+</head>
+<body id = "size">
+	<div clas = "mainPage">
+		<div class = "lastViewShow">
+			<div class = "leftArticle">
+				          <span class = "articleTitle">
+          	<h1>最新观点</h1>
+          	<p>last view</p>
+          </span>
+          <div>
+          <hr class = "hr1" />
+          <hr class = "hr2" />
+      </div>
+          <ul id="newMessage">
+              <li v-for="item of list">
+                 <newview :title = "item.title" :message = "item.message" :introduce= "item.introduce"></newview>
+             </li>
+         </ul>
+          </div>
+
+          	<div class = "rightArticle">
+			<span class = "articleTitle">
+				<h1>热门搜索观点</h1>
+			</span>
+			<div class = "newsShow">
+				<ul id="hotView">
+              <li v-for="item of list">
+                <hotViewTem :url = "item.url" :title = "item.title"></hotViewTem>
+             </li>
+         </ul>
+                
+			  </div>
+		</div>
+
+			</div> 
+          <div class = "strategyResearch">
+          	<span class = "articleTitle">
+          	<h1>中国战略研究</h1>
+          	<p>China strategy research</p>
+          </span>
+          <div>
+          <hr class = "hr1" />
+          <hr class = "hr2" />
+          </div>
+          <ul id="chinaResearchShow">
+              <li v-for="item of list">
+                <researchshow :title = "item.title" :introduce = "item.introduce" :time = "item.time"></researchshow>
+             </li>
+         </ul>    
+		</div>
+
+		<div class = "strategyResearch">
+          	<span class = "articleTitle">
+          	<h1>国际战略研究</h1>
+          	<p>International strategy research</p>
+          </span>
+          <div>
+          <hr class = "hr1" />
+          <hr class = "hr2" />
+          </div>
+          <ul id="inResearchShow">
+              <li v-for="item of list">
+                <researchshow :title = "item.title" :introduce = "item.introduce" :time = "item.time"></researchshow>
+             </li>
+         </ul>    
+		</div>
+
+        </div>
+
+		<template id="demo">  
+ 			<div style = "height:148px; border-bottom:2px dashed #999;font-family: 'PingFang-SC-Regular';"> 
+				<h3 style = "font-size: 20px;margin-top:15px;">{{title}}</h3> 
+				<p style = "color:#999;margin-top:5px;font-size:13px;">{{message}}</p> 
+				<p style = "font-size:15px;margin-top:5px;">{{introduce}}</p>
+			</div>
+		</template>
+
+        <template id = "hotViewTem">
+			<div style = "font-family: 'PingFang-SC-Regular';line-height:90px;">
+				<a v-bind:href = "url" style = "font-size:20px;margin-left: 15px;">{{title}}</a>
+			</div>
+		</template>	
+
+		<template id = "ResearchTem">
+			<div style = "font-family: 'PingFang-SC-Regular';margin-left: 30px;border-bottom:2px dashed #999;padding-bottom: 20px;padding-top: 20px;">
+				<h3 style = "font-size: 20px;margin-top:15px;">{{title}}</h3> 
+				<p style = "color:#999;margin-top:5px;font-size:13px;">{{introduce}}</p> 
+				<p style = "font-size:15px;margin-top:5px;color:#999;text-align: right;">{{time}}</p>
+			</div>
+		</template>
+
+
+	<script type="text/javascript">
+		var Newview = {
+			template:'#demo',
+			props: ['title', 'message', 'introduce']	
+		}
+
+		var HotViewTem1 = {
+			template:'#hotViewTem',
+			props:['url','title']
+		}
+
+		var ResearchTem1 = {
+			template:'#ResearchTem',
+			props:['title','introduce','time']
+		}
+
+	</script>
+
+	<script type="text/javascript">
+		var example1 = new Vue({
+             el: '#newMessage',
+             
+                  data: {
+                    list: [{ title: '马国大选算盘连连唯缺激情',
+                       message: '来源：《联合早报》 作者：胡一闪 发布时间：2018-04-17',
+                       introduce:'我不久前预测，马来西亚第14届全国大选较有可能会在接近法定期限的七八月间举行。在这届大选里起关键作用的，主要还是乡区以及城市中下层的选民，而大多政治意识与批判精神更为成熟、教育与见闻更为开阔、收入与生活更为宽裕的城市中上······'
+                   },
+                   {
+                   	   title: '2017中东极端主义发展趋势',
+                       message: '来源：《人民论坛》 作者：王锁劳 发布时间：2018-04-177',
+                       introduce:'2017年中东极端主义主要是指“伊拉克和黎凡特伊斯兰国”（以下简称“伊斯兰国”）和埃及“穆斯林兄弟会”（以下简称“穆兄会”）所鼓吹、宣传和奉行的政治伊斯兰思想。2017年中东极端主义的主要表现为······'
+                   },
+                   
+                   { title: '一种新型的地缘政治观',
+                       message: '来源：一带一路数据库 作者：卢刚 发布时间：2018-03-23',
+                       introduce:'随着“一带一路”走出去战略的推进，西部周边国家的地缘战略意义更为凸显。美印关系拉近，中国在南亚方向将面临更大的战略压力。作者认为，要用一种新的地缘政治观来看待和认识西部周边的地缘政治现实，将南亚－中亚视为一个统一的整体来进行战略筹划，通过区域经······'
+                   },
+
+                   { title: '世界关注中国，中国丝路学振兴不再是梦',
+                       message: '来源：《环球时报》 作者：马丽荣 发布时间：2018-03-16',
+                       introduce:'近年来，中国因“一带一路”倡议赢得众多国家积极响应而被推向世界舞台的中央，更因新时代中国特色社会主义取得举世瞩目的伟大成就而引发世界对中国的高度关注。其中，西方大国对“一带一路”的关注五味杂陈、国际社会对中国19大与两会的关注则充满期待与关切。'
+                   }
+                   ]
+               }
+                    });
+
+
+
+		var hotViews = new Vue({
+			el:'#hotView',
+			data:{
+				list:[{
+					url:"#",
+					title:'马丽荣:世界关注中国'
+			},
+			{
+				url:"#",
+				title:'卢刚:一种新型的地缘政治观'
+			},
+			{
+				url:"#",
+				title:'王锁劳：2017中东极端主义发展趋势'
+			},
+			{
+				url:"#",
+				title:'王义贵：如何看待“一带一路建设”成果'
+			},
+			{
+				url:"#",
+				title:'张雨晴：一带一路成果分析'
+			},
+			{
+				url:"#",
+				title:'杨剑：为北极治理贡献中国力量'
+			},
+			{
+				url:"#",
+				title:'吴芳：中国梦与一带一路'
+			}
+			]
+		}
+		})
+
+
+
+		var ResearchTems = new Vue({
+			el:'#chinaResearchShow',
+			data:{
+				list:[{
+					title:'一季度中国对"一带一路"沿线新增投资36.1亿美元',
+					introduce:'一季度，我国境内投资者共对全球140个国家和地区的2023家境外企业进行了非金融类直接投资，累计实现投资255亿美元，同比增长24.1%，连续5个月保持增长。',
+					time:'2018-04-17'
+				},
+				{
+					title:'【中国一带一路网丨丝路新闻摘要】2017年4月17日',
+					introduce:'全国人大常委会委员长张德江14日至16日对立陶宛进行正式友好访问。张德江说，在“一带一路”建设和“16+1合作”框架下，两国交通物流、基础设施建设等领域的交流与合作日趋紧密，取得积极进展，希望立方为两国企业合作提供政策支持。',
+					time:'2018-04-17'
+				},
+				{
+					title:'国际社会积极评价习近平在海南庆祝会上重要讲话',
+					introduce:'海南要高举改革开放旗帜，创新思路、凝聚力量、突出特色、增创优势，努力成为新时代全面深化改革开放的新标杆，形成更高层次改革开放新格局。”',
+					time:'2018-04-16'
+				}
+				]
+			}
+		})
+
+
+		var inResearchTems = new Vue({
+			el:'#inResearchShow',
+			data:{
+				list:[{
+					title:'超六成地区电力供应不足 中企助缅甸解决电力短缺难题',
+					introduce:'“中国帮助缅甸发展电力产业，有助于增加供电能力和降低电价，对缅甸经济社会发展、消除贫困意义重大。”缅甸投资委员会主席觉温期待缅中双方在电力以及其他领域有着更广泛的合作。',
+					time:'2018-04-17'
+				},
+				{
+					title:'印媒称印度请中国为其火车提速 并欢迎投标火车站重建项目',
+					introduce:'“报道称，印度国家转型委员会副主席拉吉夫·库马尔说，印方已向中方指出，印度的火车站重建计划规模很大，总共约有600座需要重建。他们可以投标任何火车站的重建项目。',
+					time:'2018-04-16'
+				},
+				{
+					title:'中日近八年首度重启经济对话 讨论贸易及投资等话题',
+					introduce:'“根据中国商务部网站消息，中日双方商定，第四次中日经济高层对话于4月16日在日本东京举行。中国国务委员兼外交部长王毅和日本外务大臣河野太郎将共同主持此次对话，两国政府相关部门负责人将出席对话。',
+					time:'2018-04-15'
+				}]
+			}
+		})
+
+		
+
+
+	</script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:'#newMessage',
+			components:{
+				'newview':Newview
+			}
+		});
+
+		var hv = new Vue({
+			el:'#hotView',
+			components:{
+				'hotviewtem':HotViewTem1
+			}
+		})
+
+		var rs = new Vue({
+			el:'#chinaResearchShow',
+			components:{
+				'researchshow':ResearchTem1
+			}
+		})
+
+		var ins = new Vue({
+			el:'#inResearchShow',
+			components:{
+				'researchshow':ResearchTem1
+			}
+		})
+</script>
+
+</body>
+</html>

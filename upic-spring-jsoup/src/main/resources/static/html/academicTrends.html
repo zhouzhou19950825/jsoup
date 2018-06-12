@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" href = "../css/YDYL.css">
+	<script type="text/javascript" src = "../js/vue.js"></script>
+	<title>学术动态篇</title>
+</head>
+<body id = "size" >
+	<div class = "mainPage" style = "margin-left: 15px;">
+		<h2 class = "academicTitle">{{title}}</h2>
+		<div class = "literatureInfo">
+			<p>作者：{{author}}</p>
+			<p>出版日期:{{date}}</p>
+			<p>报告页数:{{page}}页</p>
+			<p>报告大小:{{size}}KB</p>
+			<p>报告字数:{{count}}字</p>
+			<p>所属丛书:{{bookname}}</p>
+			<p>所属图书:{{bookname1}}</p>
+			<div>
+				<button class = "literatureBtn">下载阅读</button>
+				<button class = "literatureBtn">在线阅读</button>
+				<button class = "literatureBtn">原版阅读</button>
+				<button class = "literatureBtn">加入收藏</button>
+		</div>
+	</div>
+
+	<div class = "summary">
+		<h4>文章摘要</h4>
+		<article>
+			{{introduce}}
+		</article>
+		<div>
+			<p>关键词:{{keywords}}</p>
+		</div>
+	</div>
+
+
+	<div class = "authorInfo">
+		<h4>作者信息</h4>
+		<p>{{information}}</p>
+		</div>	
+	</div>
+
+	<script type="text/javascript">
+		var academicArticle = new Vue({
+			el:'.mainPage',
+			data:{
+				title:'“一带一路”与中国经济外交转型',
+				autor:'高程',
+				date:'2017年04月',
+			    page:'15',
+			    size:'904.75',
+			    count:'14212',
+			    bookname:'中国社会科学院国际研究学部集刊',
+			    bookname1:'“一带一路”与中国发展战略',
+			    introduce:'本文试图从中国经济外交转型的角度分析"一带一路"战略构想。2009年以来，东亚地区力量对比的变化和美国亚太战略调整导致了中美邻互动关系的新逻辑，由此降低了中国传统经济外交的战略效果。"一带一路"作为中国实现崛起和民族复兴的大战略，正是在中国外交转型背景下经济外交模式调整的产物，其着眼点在于运用市场和经济资源开拓中国与周边及世界的外交新局面，以缓解周边战略压力和构造地区新秩序。"一带一路"需要发挥中国经济外交引擎作用，让地区关注点重新回到"共同发展"议题上，改变粗放的传统经济外交模式，以双边关系为节点有序缔结网状多边合作，通过打造周边战略支点国家，推进差异性经济外交策略。',
+			    keywords:'一带一路 周边外交 中国经济外交 大战略',
+			    information:'高程，中国社会科学院亚太与全球战略研究院研究员。'
+			}
+		})
+	</script>
+</body>
+</html>

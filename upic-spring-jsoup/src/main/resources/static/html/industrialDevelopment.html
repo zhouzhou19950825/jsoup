@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" href = "../css/YDYL.css">
+	<link rel = "stylesheet" href = "../css/jquery.range.css">
+	<script type="text/javascript" src = "../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript"  src = "../js/jquery.range.js"></script>
+	<script src="../Highmaps-6.1.0/code/highcharts.js"></script>
+	<script src="../Highmaps-6.1.0/code/css/js/modules/exporting.js"></script>
+	<title>产业发展篇</title>
+</head>
+<body id = "size">
+	<div class = "mainPage">
+		<div class = "topID">
+			<p>选择TIMERANGE</p>
+	    <div class = "timeRange">
+	    	<input value = "1960,2017" id = "timeSelect">
+	    </div>
+	    	<button id = "filterBtn">添加过滤器</button>
+	    </div>
+	    <div class = "middle1ID">
+	    	<button id = "compareBtn">比较数据</button>
+            
+            <div class = "group">
+            	<p>组</p>
+            	<select>
+            		<option>贸易</option>
+            		<option>GDP</option>
+            	</select>
+            </div>
+
+            <div class = "field">
+            	<p>域</p>
+            	<select>
+            		<option>作物和牲畜产品</option>
+            		<option>钢铁</option>
+            		<option>石油</option>
+            	</select>
+            </div>
+
+            <div class = "country">
+            	<p>国家/地区</p>
+            	<input type = "text">
+            </div>
+
+            <div class = "index">
+            	<p>指标</p>
+            	<input type = "text">
+            </div>
+
+
+            <div class = "project">
+            	<p>项目</p>
+            	<input type = "text">
+            </div>
+	</div>
+
+	<div class = "middle2ID">
+            <div class = "group">
+            	<p>组</p>
+            	<select>
+            		<option>贸易</option>
+            		<option>GDP</option>
+            	</select>
+            </div>
+
+            <div class = "field">
+            	<p>域</p>
+            	<select>
+            		<option>作物和牲畜产品</option>
+            		<option>钢铁</option>
+            		<option>石油</option>
+            	</select>
+            </div>
+
+            <div class = "country">
+            	<p>国家/地区</p>
+            	<input type = "text">
+            </div>
+
+            <div class = "index">
+            	<p>指标</p>
+            	<input type = "text">
+            </div>
+
+
+            <div class = "project">
+            	<p>项目</p>
+            	<input type = "text">
+            </div>
+	</div>
+
+	<div class = "bottomID">
+		<button id = "chartSwitching">图表切换</button>
+		<div id="container" style="max-width:1000px;height:370px"></div>
+		<div class = "buttonField">
+			<button id = "download">下载</button>
+			<button id = "print">打印</button>
+			<button id = "export">导出</button>
+			<button id = "share">分享</button>
+		</div>
+	</div>
+
+
+</div>
+</div>
+
+	<script type="text/javascript">
+		$('#timeSelect').jRange({
+			from:1960,
+			to:2050,
+			step:1,
+			format:'%s',
+			width:800,
+			showLabels:true,
+			isRange:true
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(function(){
+		$('#container').highcharts({
+		title: {
+				text: ' '
+		},
+		subtitle: {
+				text: ' '
+		},
+		xAxis:{
+			title:{
+				text:'年份'
+			}
+		},
+		yAxis: {
+				title: {
+						text: '进口出口数量'
+				}
+		},
+		legend: {
+				align:'center',
+				layout: 'horizontal',
+				verticalAlign: 'top',
+				x:0,
+				y:0
+		},
+		plotOptions: {
+				series: {
+						label: {
+								connectorAllowed: false
+						},
+						pointStart: 1965,
+						pointInterval:5
+				}
+		},
+		series: [{
+				name: '中国 出口数量 茴香、巴贝多的茴香、香菜',
+				data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175,165540,178540,195850,205050]
+		}, {
+				name: '中国 进口数量 茴香、巴贝多的茴香、香菜',
+				data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434,55252,66525,78552,85252]
+		}, {
+				name: '越南 出口数量 茴香、巴贝多的茴香、香菜',
+				data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387,58526,64545,70585,85251]
+		}, {
+				name: '越南 进口数量 茴香、巴贝多的茴香、香菜',
+				data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227,null,null,null,null]
+		}],
+
+		navigation: {
+						buttonOptions: {
+								enabled: false
+						}
+				},
+		exporting: {
+						type: 'application/pdf'
+				},
+		responsive: {
+				rules: [{
+						condition: {
+								maxWidth: 500
+						},
+						chartOptions: {
+								legend: {
+										layout: 'horizontal',
+										align: 'center',
+										verticalAlign: 'bottom'
+								}
+						}
+				}]
+		}
+});
+
+
+		$('#download').click(function () {
+				var chart = $('#container').highcharts();
+				chart.exportChart();
+		});
+
+
+		$('#print').click(function () {
+				var chart = $('#container').highcharts();
+				chart.print();
+		});
+
+		$('#export').click(function(){
+			    var chart = $('#container').highcharts();
+                chart.exportChart({type:"image/png"});
+		});
+
+	});
+	</script>
+</body>
+</html>
